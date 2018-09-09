@@ -12,6 +12,13 @@ $footer-gray: #666666;
 $white: #FFFFFF;
 $black: #000000;
 
+// Mixins
+@mixin table-collapse()
+{
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
 
 body { padding: 0; margin: 0; }
 img { display: block; }
@@ -35,8 +42,7 @@ a:hover { text-decoration: underline !important; }
 	width: 100%;
 	max-width: 100%;
 	font-family: $base-font;
-	border-spacing: 0;
-	border-collapse: collapse;
+	@include table-collapse;
 }
 
 #wrapper
@@ -56,8 +62,7 @@ a:hover { text-decoration: underline !important; }
 	background: $white;
 	width: 600px;
 	max-width: 100%;
-	margin: 0 auto;
-	border-collapse: collapse;
+	@include table-collapse;
 }
 
 .headerlink
@@ -142,13 +147,11 @@ a:hover { text-decoration: underline !important; }
 {	
 	background: $spotlight-gray;
 	width: 600px;
-	margin: 0 auto;
-	border-collapse: collapse;
+	@include table-collapse;
 
 	#regional-spotlight
 	{	
-		margin: 0 auto;
-		border-collapse: collapse;
+		@include table-collapse;
 	}
 
 	#spotlight-blurb
@@ -164,8 +167,7 @@ a:hover { text-decoration: underline !important; }
 
 	#market-watch
 	{
-		margin: 0 auto;
-		border-collapse: collapse;
+		@include table-collapse;
 	}
 
 	.readmore-spotlight
@@ -189,8 +191,7 @@ a:hover { text-decoration: underline !important; }
 	max-width: 100%;
 	margin: 0 auto;
 	font-family: $base-font;
-	border-spacing: 0;
-	border-collapse: collapse;
+	@include table-collapse;
 
 	#footer-banner
 	{
@@ -206,7 +207,6 @@ a:hover { text-decoration: underline !important; }
 	{
 		background: $footer-gray;
 		font-family: $base-font;
-		border-spacing: 0;
-		border-collapse: collapse;
+		@include table-collapse;
 	}
 }
